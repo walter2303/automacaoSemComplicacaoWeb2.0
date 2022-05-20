@@ -4,11 +4,12 @@ import br.com.chronosAcademy.maps.PrincipalMap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PrincipalPage {
-    static WebDriver driver;
-    static PrincipalMap principalMap;
+    WebDriver driver;
+    PrincipalMap principalMap;
 
     public PrincipalPage(WebDriver driver) {
         this.driver = driver;
@@ -16,13 +17,14 @@ public class PrincipalPage {
         PageFactory.initElements(driver, principalMap);
     }
 
-    public static String getTitulo() {
-
+    public String getTitulo() {
         return principalMap.txtTitulo.getText();
+    }
 
-    }
     public void clickBotao() {
-       principalMap.btnTitulo.click();
+        principalMap.btnTitulo.click();
     }
+
+
 
 }

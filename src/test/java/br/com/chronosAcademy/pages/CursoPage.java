@@ -14,7 +14,6 @@ public class CursoPage {
         this.driver = driver;
         cursoMap = new CursoMap();
         PageFactory.initElements(driver, cursoMap);
-
     }
 
     public String getTitulo2() {
